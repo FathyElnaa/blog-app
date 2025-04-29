@@ -7,10 +7,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                <?php if(isset($_SESSION['Username'])): ?>
+                <?php if(isset($_SESSION['User'])): ?>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php?page=home">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php?page=blogs">blog</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php?page=logout">logout</a></li>
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php"><?=$_SESSION['Username'] ?></a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php"><?=$_SESSION['User']['Username'] ?></a></li>
                 <?php else:?>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php?page=register">Registration</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php?page=login">login</a></li>

@@ -22,6 +22,18 @@ switch ($page) {
     case "login":
         require("./views/auth/login.php");
         break;
+    case "blogs":
+        require("./views/blog/index.php");
+        break;
+    case "Blog-add":
+        require("./views/blog/create.php");
+        break;
+    case "Blog-edit":
+        require("./views/blog/edit.php");
+        break;
+    case "Blog-show":
+        include "./views/blog/show.php";
+        break;
     case "logout":
         require("./controllers/auth/logout_control.php");
         break;
@@ -30,6 +42,15 @@ switch ($page) {
         break;
     case "auth-login":
         require("./controllers/auth/login_control.php");
+        break;
+    case "Blog-storage":
+        require("./controllers/blog/blog_control.php");
+        break;
+    case "Blog-update":
+        require("./controllers/blog/blog_control.php");
+        break;
+    case "Blog-delete":
+        require("./controllers/blog/blog_control.php");
         break;
 
     default:

@@ -44,6 +44,8 @@ function check_register($name, $email, $password)
     }
 }
 
+
+
 function check_login($email, $password)
 {
     $login_data = [
@@ -58,5 +60,19 @@ function check_login($email, $password)
     }
     if ($error = check_email($email)) {
         return $error;
+    }
+}
+function check_blog($title, $image, $content)
+{
+    $blog_data = [
+        'title' => $title,
+        'image' => $image,
+        'content' => $content
+    ];
+
+    foreach ($blog_data as $data => $value) {
+        if ($error = valid_required($value, $data)) {
+            return $error;
+        }
     }
 }
