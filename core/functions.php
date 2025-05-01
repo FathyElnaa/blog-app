@@ -126,7 +126,7 @@ function blog_update($id, $title, $image, $content)
     if (!move_uploaded_file($image['tmp_name'], $fullpath)) {
         die('Image upload failed');
     }
-    $sql = "UPDATE  posts SET title='$title',descriptions='$content',`image`='$re_path', where id = '$id'";
+    $sql = "UPDATE  posts SET title='$title',descriptions='$content',`image`='$re_path' where id = '$id'";
     $res = mysqli_query($connect, $sql);
     if ($res) {
         return true;

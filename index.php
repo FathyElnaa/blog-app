@@ -47,7 +47,7 @@ switch ($page) {
         require("./controllers/blog/blog_control.php");
         break;
     case "Blog-update":
-        require("./controllers/blog/blog_control.php");
+        require("./controllers/blog/updateblog.php");
         break;
     case "Blog-delete":
         require("./controllers/blog/blog_control.php");
